@@ -10,4 +10,10 @@ def get_number_of_posts(data:dict)->int:
     Returns: 
         int: the number of posts for the given dictionary
     """
-    return
+
+    d = data["messages"]
+    return len(d)
+
+if __name__=="__main__":
+    data=fromJson('data/result.json')
+    print(get_number_of_posts(data))
